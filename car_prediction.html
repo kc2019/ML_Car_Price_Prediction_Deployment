@@ -1,0 +1,75 @@
+<doctype html>
+<html>
+
+<h1 style="text-align:center">
+Cardekho Car Price Prediction
+</h1>
+
+<br><br>
+
+<body topmargin="50" leftmargin="300" bgcolor="pink">
+<!--  comment section
+<form action="kuntalc1@gmail.com" method="post">
+-->
+<form action="{{ url_for('predict')}}" method="post">
+<p>
+<label for="year">Year when the Car Bought : </label>
+<input id="year" name="year" type="text">
+
+<br><br>
+
+<label for="present_price">What was the Buying Price(in lakhs) ? : </label>
+<input id="present_price" name="present_price" type="text">
+
+<br><br>
+
+<label for="kms_driven">How Many Kilometer Driven ? : </label>
+<input id="kms_driven" name="kms_driven" type="text">
+
+<br><br>
+
+<label for="owner">How Many Owner Previously Had the Car ? : </label>
+<SELECT id="owner" name="owner">
+<OPTION>0
+<OPTION>1
+<OPTION>3
+</SELECT>
+
+<br><br>
+
+<label for="fuel_type">What's the Fuel Type ? : </label>
+<SELECT id="fuel_type" name="fuel_type">
+<OPTION>CNG
+<OPTION>Diesel
+<OPTION>Petrol
+</SELECT>
+
+<br><br>
+
+<label for="seller_type">Are you a Dealer or Individual ? : </label>
+<SELECT id="seller_type" name="seller_type">
+<OPTION>Dealer
+<OPTION>Individual
+</SELECT>
+
+<br><br>
+
+<label for="transmission">Transmission Type ? : </label>
+<SELECT id="transmission" name="transmission">
+<OPTION>Automatic
+<OPTION>Manual
+</SELECT>
+
+<br><br>
+
+<INPUT value="Click here to Predict the Selling Price of the Car" type="Submit">
+   <INPUT TYPE="RESET">
+
+<br><br><h3>{{ prediction_text }}<h3>
+</p>
+</form>
+</body>      
+
+
+</html>
+
